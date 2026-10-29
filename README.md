@@ -2,6 +2,11 @@
 
 A lightweight power management and profile-switching suite designed for Intel laptops (specifically tested on 10th Gen HP hardware with strict firmware-level power constraints). This setup lets you instantly cycle between **Performance**, **Balanced**, and **Eco** modes to balance thermal limits, battery life, and developer workflow responsiveness.
 
+# ⚠️ DISCLAMER
+Please Note: The power limits (PL1/PL2 wattage targets) and voltage offsets included in this repository are specifically configured and tested for an HP 14s laptop running a 10th Generation Intel CPU.
+* Voltage Offsets: Undervolting values (such as -100mV on the CPU and -80mV on the Cache/GPU) are heavily silicon-dependent. Applying these exact offsets to a different laptop model or CPU generation may cause system instability, kernel panics, or unexpected reboots. Always test stability incrementally using tools like stress-ng.
+* Power Limits: The wattage caps (15W, 10W, 6W) are tailored to mitigate aggressive firmware-level thermal throttling unique to this chassis design. Other laptop models have different VRM limits and thermal cooling capacities.Use these configurations as a structural reference, and adjust the values in your .perf, .bal, and .eco templates to match your specific hardware's thermal threshold and silicon lottery limits.
+
 ---
 
 ## Features
