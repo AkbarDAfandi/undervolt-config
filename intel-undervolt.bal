@@ -1,0 +1,4 @@
+undervolt 0 'CPU' -100
+undervolt 1 'GPU' -80
+undervolt 2 'CPU Cache' -80
+power package 0 10 15
